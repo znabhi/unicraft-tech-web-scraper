@@ -6,7 +6,7 @@ function App() {
 
   const handleScrape = async () => {
     const urlList = urls.split("\n").map(u => u.trim()).filter(Boolean);
-    const res = await axios.post("http://localhost:5000/api/scrape", {
+    const res = await axios.post("https://unicraft-tech-web-scraper.onrender.com/api/scrape", {
       urls: urlList,
       use_dynamic: false
     });
